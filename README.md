@@ -16,6 +16,9 @@ UNIQUE: `kode_pasien`, `nomor_rekam`. CHECK: `usia_tahun` 0–30.
    `mysql -u root < database/klinik_hewan_2401020132.sql`
 5. `composer dump-autoload` lalu `php artisan serve`
 6. Buka `http://127.0.0.1:8000/pasien-hewan`
+7. ## Catatan
+Gunakan `SESSION_DRIVER=file` di `.env`. Dengan driver `database` (bawaan Laravel),
+aplikasi membutuhkan tabel `sessions` dan halaman error saat koneksi database putus.
 
 ## Route
 | Method | URI | Fungsi |
